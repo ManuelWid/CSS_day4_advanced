@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Day4 - Grid</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .grid {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(3,1fr);
+            gap: 20px;
+            padding: 5rem;
+        }
+
+        .bigcol {
+            grid-column: span 2;
+        }
+
+        .bigrow {
+            grid-row: span 2;
+        }
+
+        .item {
+            border: 1px solid red;
+            background-image: url("https://cdn.pixabay.com/photo/2022/11/29/15/18/sunset-7624720_960_720.jpg");
+            background-size: cover;
+            background-position: center;
+
+            /* only for centering the numbers */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="grid">
+        <div class="item bigcol">1</div>
+        <div class="item bigcol bigrow">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item bigcol">5</div>
+        <div class="item bigcol">6</div>
+    </div>
+
+</body>
+</html>
